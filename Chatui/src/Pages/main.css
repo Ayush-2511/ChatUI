@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+.main {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Heading {
+    position: absolute;
+    height: auto;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    color: #FAF3E1;
+    font-family: Playfair Display, serif;
+    font-size: 48px;
+    font-weight: 200;
+    margin-bottom: 20px;
+    filter: blur(0px);
+    animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        filter: blur(20px);
+        opacity: 0;
+        transform: translate(-50%, -80%);
+    }
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+.chatbox {
+    position: absolute;
+    width: 650px;
+    height: 50px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background-color: #3E3E3E;
+    border-radius: 25px;
+    border: none;
+    padding: 0 10px 0 20px;
+    font-size: 1.2rem;
+    color: #FAF3E1;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease-in-out;
+    outline: #ff6d1f00 solid 2px;
+}
+.chatbox:hover {
+    outline: #ff6d1f73 solid 2px;
+}
+.chatbox:focus {
+    outline: #ff6d1f73 solid 2px;
+}
+.send {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #FF6D1F;
+    border-radius: 17.5px;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(282.5px, -17.5px);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
