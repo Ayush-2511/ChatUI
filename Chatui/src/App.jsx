@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Loading from './components/Loading'
 import Main from './Pages/Main'
-
+import './App.css'
 
 
 function App() {

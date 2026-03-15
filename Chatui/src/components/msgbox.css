@@ -1,0 +1,21 @@
+.msgbox-hidden {
+    height: 0px;
+    width: 650px;
+    border-radius: 25px;
+    background-color: wheat;
+    position: absolute;
+    top:46.7%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.msgbox-visible {
+    height: 40rem;
+    width: 850px;
+    border-radius: 25px;
+    background-color: #1d1d1d;
+    position: absolute;
+    top:46.7%;
+    left: 50%;
+    transform: translate(-50%,-58%);
+    transition: all 0.3s ease;
+}

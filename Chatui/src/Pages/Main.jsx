@@ -1,10 +1,15 @@
+import Chatbox from "../components/chatbox";
+import MsgBox from "../components/Msgbox";
 import "./main.css"
+import { useState } from "react";
 function Main(){
+    const [sent, setSent] = useState(false)
     return(
         <div className="main">
+            <MsgBox messages={""} send={sent} />
             <div className="Heading">Hello, Ayush!</div>
-            <input type="text" className="chatbox"/>
-            <button className="send"></button>
+            
+            <Chatbox sent={sent} setSent={setSent}/>
         </div>
     )
 }

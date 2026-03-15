@@ -1,0 +1,154 @@
+.chatbox {
+    height: 50px;
+    width: 650px;
+    position: relative;
+    background-color: transparent;
+}
+.input {
+    position: absolute;
+    min-width: 100%;
+    border-radius: 25px;
+    border: #ff6d1f00 solid 2px;
+    background-color: #3E3E3E;
+    padding: 9px 20px 9px 20px;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+    color: #FAF3E1;
+
+    resize: none;
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 50px;
+    max-height: 160px;
+
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    outline: none;
+
+    transition: 0.3s ease-in-out;
+}
+
+.input:hover {
+    outline: none;
+    border: #ff6d1f73 solid 2px;
+}
+.input:focus {
+    outline: none;
+    border: #ff6d1f73 solid 2px;
+}
+
+
+.send {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    border-radius: 17.5px;
+    border: none;
+    top: 50%;
+    transform: translate(607.5px,-50%);
+
+    background-color: #FF6D1F;
+    background-image: url(../assets/send.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --legacy-- */
+/* 
+.input {
+    position: absolute;
+    resize: none;
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 650px;
+    min-height: 50px;
+    max-height: 225px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    background-color: #3E3E3E;
+    border-radius: 25px;
+    border: none;
+    padding: 9px 10px 9px 20px;
+    font-family: Lato, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #FAF3E1;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease-in-out;
+    outline: none;
+    border: #ff6d1f00 solid 2px;
+}
+.chatbox-static{
+    position: relative;
+    min-height: 50px;
+    height: auto;
+    max-height: 225px;
+    width: 650px;
+    bottom:46.7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.chatbox-anim {
+    position: relative;
+    min-height: 50px;
+    height: auto;
+    max-height: 225px;
+    width: 650px;
+    bottom:46.7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.input:hover {
+    outline: none;
+    border: #ff6d1f73 solid 2px;
+}
+.input:focus {
+    outline: none;
+    border: #ff6d1f73 solid 2px;
+}
+.send {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #FF6D1F;
+    background-image: url(../assets/send.png);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 17.5px;
+    border: none;
+    top: 0;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+ */
