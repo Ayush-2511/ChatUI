@@ -2,6 +2,10 @@
     height: 50px;
     width: 650px;
     position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    z-index: 0;
     background-color: transparent;
 }
 .input {
@@ -16,6 +20,7 @@
     font-size: 19px;
     line-height: 1.5;
     color: #FAF3E1;
+    z-index: 1;
 
     resize: none;
     overflow-y: hidden;
@@ -41,13 +46,12 @@
 
 
 .send {
-    position: absolute;
     height: 35px;
     width: 35px;
     border-radius: 17.5px;
     border: none;
-    top: 50%;
-    transform: translate(607.5px,-50%);
+    transform: translateX(-7.5px);
+    z-index: 2;
 
     background-color: #FF6D1F;
     background-image: url(../assets/send.png);
@@ -56,9 +60,19 @@
     background-repeat: no-repeat;
 }
 
-
-
-
+.chatbox-anim {
+    animation: move 0.3s ease forwards;
+}
+@keyframes move {
+    from {
+        width: 650px;
+        transform: translate(0, 0);
+    }
+    to {
+        width: 850px;
+        transform: translate(0, 320px);
+    }
+}
 
 
 

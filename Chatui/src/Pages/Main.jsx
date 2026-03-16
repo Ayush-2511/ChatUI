@@ -7,7 +7,7 @@ function Main(){
     return(
         <div className="main">
             <MsgBox messages={""} send={sent} />
-            <div className="Heading">Hello, Ayush!</div>
+            <div className={`Heading ${sent ? "Heading-hidden": "Heading-visible"}`}>Hello, Ayush!</div>
             
             <Chatbox sent={sent} setSent={setSent}/>
         </div>

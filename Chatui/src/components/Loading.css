@@ -21,10 +21,10 @@
     background-color: #FF6D1F;
     border-radius: 5px;
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
-    animation: move 2s cubic-bezier(1,.15,0,.91) 2.5s forwards, send 1.5s cubic-bezier(1,-0.11,0,1.09) 5.5s forwards;
+    animation: load 2s cubic-bezier(1,.15,0,.91) 2.5s forwards, send 1.5s cubic-bezier(1,-0.11,0,1.09) 5.5s forwards;
 }
 
-@keyframes move {
+@keyframes load {
     from {
         height: 10px;
         width: 10px;

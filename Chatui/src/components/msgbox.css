@@ -9,13 +9,13 @@
     transform: translate(-50%,0);
 }
 .msgbox-visible {
-    height: 40rem;
+    height: 43rem;
     width: 850px;
     border-radius: 25px;
     background-color: #1d1d1d;
     position: absolute;
     top:46.7%;
     left: 50%;
-    transform: translate(-50%,-58%);
-    transition: all 0.3s ease;
+    transform: translate(-50%,-55%);
+    transition: all 0.3s cubic-bezier(.36,-0.26,0,1.27);
 }
