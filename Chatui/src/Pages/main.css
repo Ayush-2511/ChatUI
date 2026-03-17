@@ -14,7 +14,7 @@
     top: 40%;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    color: #FAF3E1;
+    color: var(--text-primary);
     font-family: Playfair Display, serif;
     font-size: 48px;
     font-weight: 200;

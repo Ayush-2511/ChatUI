@@ -7,19 +7,21 @@
     align-items: center;
     z-index: 0;
     background-color: transparent;
+    transition: all 0.3s ease-in-out;
 }
 .input {
     position: absolute;
     min-width: 100%;
     border-radius: 25px;
-    border: #ff6d1f00 solid 2px;
-    background-color: #3E3E3E;
+    background: var(--bg-secondary);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 9px 20px 9px 20px;
     box-sizing: border-box;
     font-family: Lato, sans-serif;
     font-size: 19px;
     line-height: 1.5;
-    color: #FAF3E1;
+    color: var(--text-primary);
     z-index: 1;
 
     resize: none;
@@ -32,16 +34,15 @@
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
     outline: none;
 
-    transition: 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-
 .input:hover {
     outline: none;
-    border: #ff6d1f73 solid 2px;
+    border: var(--border) solid 2px;
 }
 .input:focus {
     outline: none;
-    border: #ff6d1f73 solid 2px;
+    border: var(--border) solid 2px;
 }
 
 
@@ -52,16 +53,19 @@
     border: none;
     transform: translateX(-7.5px);
     z-index: 2;
+    box-shadow: 0 0 20px var(--glow);
 
-    background-color: #FF6D1F;
+    background-color: var(--accent-primary);
     background-image: url(../assets/send.png);
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.send:hover {
+    background-color: var(--accent-hover);
+}
 .chatbox-anim {
-    animation: move 0.3s ease forwards;
+    animation: move 1s cubic-bezier(1,-0.11,0,1.09) forwards;
 }
 @keyframes move {
     from {

@@ -1,0 +1,12 @@
+.aimsg{
+    width: 425px;
+    height: auto;
+    color: var(--text-primary);
+    margin: 0.5rem;
+    padding: 1rem;
+    align-self: flex-start;
+    border-radius: 18px 18px 18px 4px;
+    border: var(--border) solid 1px;
+    background-color: var(--bg-element);
+    backdrop-filter: blur(2px);
+}

@@ -7,15 +7,30 @@
     top:46.7%;
     left: 50%;
     transform: translate(-50%,0);
+    overflow: hidden;
 }
 .msgbox-visible {
+    font-family: Lato, sans-serif;
     height: 43rem;
     width: 850px;
     border-radius: 25px;
-    background-color: #1d1d1d;
+    /* background: repeating-linear-gradient(
+        -45deg,
+        #3E3E3E,
+        #3E3E3E 10px,
+        rgba(255, 109, 31, 0.5) 10px,
+        rgba(255, 109, 31, 0.5) 11px
+    ); */
+    background-color: var(--bg-secondary);
     position: absolute;
+    display: flex;
+    flex-direction: column;
     top:46.7%;
     left: 50%;
     transform: translate(-50%,-55%);
-    transition: all 0.3s cubic-bezier(.36,-0.26,0,1.27);
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 1s cubic-bezier(1,-0.11,0,1.09);
+    overflow-y: auto;
+    padding-top: 2rem;
+    box-sizing: border-box;
 }
