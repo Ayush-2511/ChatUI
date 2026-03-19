@@ -1,5 +1,6 @@
 .aimsg{
-    width: 425px;
+    width: fit-content;
+    max-width: 700px;
     height: auto;
     color: var(--text-primary);
     margin: 0.5rem;
@@ -9,4 +10,80 @@
     border: var(--border) solid 1px;
     background-color: var(--bg-element);
     backdrop-filter: blur(2px);
+}
+
+.aimsg * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    height: auto; 
+    background-color: transparent;
+}
+.aimsg p {
+    margin-bottom: 8px; 
+}
+.aimsg p:last-child { 
+    margin-bottom: 0; 
+}
+.aimsg h1, .aimsg h2, .aimsg h3 { 
+    margin: 10px 0 4px 0; 
+    font-weight: 600; 
+}
+.aimsg ul, .aimsg ol { 
+    padding-left: 20px; 
+    margin: 4px 0; 
+}
+.aimsg li { 
+    margin: 2px 0; 
+}
+.aimsg code {
+    background: rgba(255,255,255,0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.aimsg pre {
+    background: rgba(24, 24, 24, 0.899);
+    border: 1px solid rgba(255, 255, 255, 0.279);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 8px 0;
+    overflow-x: auto;
+}
+.aimsg pre code {
+    background: transparent;
+    padding: 0;
+}
+.aimsg table {
+  width: 100%;
+  margin: 1em 0;
+  overflow: auto;
+  border: var(--border) 1px solid;
+  border-radius: 5px; /* For responsive tables */
+}
+
+.aimsg th,
+.aimsg td {
+  padding: 8px 12px;
+  /* border: 1px solid #5c5c5c; */
+  text-align: left;
+}
+
+.aimsg th {
+  background-color: var(--bg-secondary);
+  font-weight: bold;
+}
+
+.aimsg tr:nth-child(even) {
+  background-color: var(--bg-primary);
+}
+
+.aimsg tr:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* Optional: Make table scrollable on small screens */
+.aimsg .table-wrapper {
+  overflow-x: auto;
 }

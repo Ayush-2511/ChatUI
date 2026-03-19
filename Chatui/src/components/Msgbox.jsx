@@ -1,6 +1,7 @@
 import AiMsg from './ai-msg'
 import './msgbox.css'
 import UserMsg from './user-msg'
+import { useEffect, useRef } from 'react'
 
 function MsgBox({messages, send}){
     return (
