@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 from langi import chat
 from memory import memory
+from bg import getImg
 app = Flask(__name__)
 CORS(app)
 
@@ -17,5 +18,10 @@ def chat_route():
 def history():
     return jsonify({"messages": memory})
 
+@app.route("/background", methods=["GET"])
+def background():
+    img_url = getImg()
+    return jsonify({"img_url": img_url})
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

@@ -7,8 +7,16 @@ import './App.css'
 
 
 function App() {
+
   const[loading,setLoading] = useState(true)
   useEffect(()=>{
+    const res = fetch("http://localhost:5000/background")
+    .then(res=>res.json())
+    .then(data=>{
+      document.body.style.backgroundImage = `url(${data.img_url})`
+      document.body.style.backgroundSize = "cover"
+      document.body.style.backgroundPosition = "center"
+    })
     setTimeout(()=>{
       setLoading(false)
     },7500)
