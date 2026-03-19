@@ -1,6 +1,9 @@
 import requests
 import json
-key = 'ntxElg9WFahbHrGfBbhxgRUuInAuHSi-6owgUKSjGlo'
+import dotenv
+import os
+dotenv.load_dotenv()
+key = os.getenv("ACCESS_KEY")
 def getImg():
     headers = {
         'Authorization': f'Client-ID {key}'
