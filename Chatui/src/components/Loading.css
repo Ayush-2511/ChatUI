@@ -55,11 +55,13 @@
         border-radius: 5px;
         height: 10px;
         width: 469px;
+        border: 1px solid transparent;
     }
     to {
         background-color: var(--bg-element);
         border-radius: 25px;
         height: 50px;
         width: 650px;
+        border: 1px solid var(--border);
     }
 }

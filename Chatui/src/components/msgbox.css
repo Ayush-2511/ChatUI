@@ -22,15 +22,15 @@
         rgba(255, 109, 31, 0.5) 10px,
         rgba(255, 109, 31, 0.5) 11px
     ); */
-    background-color: transparent;
-    backdrop-filter: blur(20px);
+    background-color: var(--bg-secondary);
+    border: var(--border) 1px solid;
+    backdrop-filter: blur(10px);
     position: absolute;
     display: flex;
     flex-direction: column;
     top:46.7%;
     left: 50%;
     transform: translate(-50%,-55%);
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: all 1s cubic-bezier(1,-0.11,0,1.09);
     overflow-y: auto;
     padding-top: 2rem;

@@ -6,6 +6,9 @@ import { useEffect, useRef } from 'react'
 function MsgBox({messages, send}){
     const bottomref = useRef(null);
     useEffect(() => {
+        setTimeout(()=>{
+      setLoading(false)
+    },1500)
         if(bottomref.current){
             bottomref.current.scrollIntoView({behavior: "smooth"});
         }

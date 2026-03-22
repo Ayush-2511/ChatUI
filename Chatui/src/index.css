@@ -1,7 +1,7 @@
 :root {
-    --bg-primary:     #222222;  /* deep dark purple-black */
-    --bg-secondary:   #3E3E3E;  /* slightly lighter */
-    --bg-element:     #2d2d2d;  /* cards, input boxes */
+    --bg-primary:     #111111;  /* deep dark purple-black */
+    --bg-secondary:   #2b2b2b;  /* slightly lighter */
+    --bg-element:     #292929;  /* cards, input boxes */
 
     --accent-primary: #FF6D1F;  /* bright vivid red-pink */
     --accent-hover:   #ff8b4d;  /* lighter pink on hover */
@@ -20,17 +20,11 @@
   padding: 0;
   height: 100%;
 }
-body {
-  backdrop-filter: blur(0px);
-  z-index: -7;
-}
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: -6;
+body{
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: Lato, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

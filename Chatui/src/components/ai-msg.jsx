@@ -1,11 +1,13 @@
 import './ai-msg.css'
-import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
-function AiMsg({text}) {
+import { memo, lazy, Suspense } from 'react'
+const ReactMarkdown = lazy(() => import('react-markdown'))
+const AiMsg = memo(function AiMsg({text}) {
     return (
         <div className="aimsg">
+            <Suspense fallback={<div className='markdown-placeholder'>Loading...</div>}>
             <ReactMarkdown remarkPlugins={[remarkGfm]} components={{
                 code({node, inline, className, children, ...props}) {
                     const match = /language-(\w+)/.exec(className || '');
@@ -22,7 +24,8 @@ function AiMsg({text}) {
             }}>
                 {text}
             </ReactMarkdown>
+            </Suspense>
         </div>
     )
-}
+})
 export default AiMsg
