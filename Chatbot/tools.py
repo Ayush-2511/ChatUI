@@ -1,6 +1,7 @@
 from langchain.tools import tool
 from datetime import datetime
 from vectordb import store_memory
+from notes import saveNote
 @tool
 def get_time():
     """Returns the current time"""
@@ -19,4 +20,9 @@ def calculate(equation):
     Example:
     4 * 3 - 1 + 5 / 6"""
     return eval(equation)
-tools = [get_time, store_mem, calculate]
+
+@tool
+def save_note(json_data):
+    """saves a note with the given filename and content. The input should be a JSON string with 'filename' and 'content' fields."""
+    return saveNote(json_data)
+tools = [get_time, store_mem, calculate, save_note]

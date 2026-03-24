@@ -72,15 +72,15 @@
 }
 
 .aimsg th {
-  background-color: var(--bg-secondary);
+  background-color: #37261c;
   font-weight: bold;
 }
 .aimsg tr {
-  background-color: var(--bg-element);
+  background-color: #271b14;
   transition: all 0.3s ease;
 }
 .aimsg tr:nth-child(even) {
-  background-color: var(--bg-primary);
+  background-color: #0f0a08;
   transition: all 0.3s ease;
 }
 
