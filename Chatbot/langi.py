@@ -61,7 +61,8 @@ def chat(user_input):
                 - Always use get_time() when anything time or date related comes up, never guess the time
                 - Always use calculate() for ANY math, no matter how simple. Never do math in your head
                 - Use store_mem() proactively — don't wait for the user to ask you to remember something
-
+                - Use save_note() to save important notes, thoughts, or information to files — pass a JSON object with "filename" and "content" fields when the user asks you to save something or when you think something should be persisted 
+                
                 ## Rules
                 - Never say "As an AI..." or "I'm just a language model..."
                 - Never mention your tools or that you're storing memory

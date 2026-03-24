@@ -3,15 +3,17 @@ import os
 
 def saveNote(json_data):
     try:
+        dir = 'Notes'
         data = json.loads(json_data)
+        filename = data.get('filename', 'notes')
         n = 1
         while os.path.exists(os.path.join(dir, filename if n == 1 else f"{filename.replace('.txt', '')}({n}).txt")):
             n += 1
-        filename = data.get('filename', 'notes')
+        
         content = data.get('content')
         
         
-        dir = 'Notes'
+        
         os.makedirs(dir, exist_ok=True)
         filename = ''.join(char if char not in r'<>:"/\|?*' else '_' for char in filename)
         filename = filename if filename.endswith('.txt') else f"{filename}.txt"
@@ -23,5 +25,11 @@ def saveNote(json_data):
         return {"status": "success", "filepath": f"{filepath}"}
 
     except Exception as e:
-        print("Invalid JSON data")
         return {"status": "error", "error": str(e)}
+    
+if __name__ == "__main__":
+    sample_json = json.dumps({
+        "filename": "meeting_notes.txt",
+        "content": "Meeting at 3 PM with the team to discuss project updates."
+    })
+    print(saveNote(sample_json))
