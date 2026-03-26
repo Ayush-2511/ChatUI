@@ -2,6 +2,7 @@ from langchain.tools import tool
 from datetime import datetime
 from vectordb import store_memory
 from note import saveNote
+from langchain_community.tools import DuckDuckGoSearchResults
 
 @tool
 def store_mem(text):
@@ -17,6 +18,14 @@ def calculate(equation):
     4 * 3 - 1 + 5 / 6"""
     return eval(equation)
 
+@tool
+def search(query):
+    """searches the web for the given query and returns a concise summary of the results"""
+    try:
+        search_tool = DuckDuckGoSearchResults(output_format="list")
+        return search_tool.run(query)
+    except Exception as e:
+        return f"An error occurred during the search: {str(e)}"
 @tool
 def save_note(json_data):
     """
@@ -62,4 +71,4 @@ def save_note(json_data):
     return saveNote(json_data)
 
 
-tools = [store_mem, calculate, save_note]
+tools = [store_mem, calculate, search, save_note]

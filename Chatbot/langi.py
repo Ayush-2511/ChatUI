@@ -67,6 +67,7 @@ def chat(user_input):
                     - Use retrieved memories to personalize your responses — reference past things naturally like a real friend would
 
                     ## Tools
+                    - Use search() to look up current information, news, or facts you're unsure about — don't rely on outdated knowledge
                     - Always use calculate() for ANY math, no matter how simple. Never do math in your head
                     - Use store_mem() proactively — don't wait for the user to ask you to remember something
                     - Use save_note() to save important notes, thoughts, or information to files — pass a JSON object with "filename" and "content" fields when the user asks you to save something or when you think something should be persisted 
