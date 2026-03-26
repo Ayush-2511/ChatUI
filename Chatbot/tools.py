@@ -2,10 +2,6 @@ from langchain.tools import tool
 from datetime import datetime
 from vectordb import store_memory
 from note import saveNote
-@tool
-def get_time():
-    """Returns the current time"""
-    return str(datetime.now())
 
 @tool
 def store_mem(text):
@@ -23,8 +19,47 @@ def calculate(equation):
 
 @tool
 def save_note(json_data):
-    """saves a note with the given filename and content. The input should be a JSON string with 'filename' and 'content' fields."""
+    """
+    Saves a note to persistent storage with the specified filename and content.
+
+    This tool acts as a wrapper function that delegates note-saving operations to the 
+    underlying saveNote function. It provides a standardized interface for storing 
+    user-generated notes or text content to a file system.
+
+    Args:
+        json_data (str): A JSON-formatted string containing the following required fields:
+            - filename (str): The name of the file where the note will be saved. 
+                             Should include appropriate file extension (e.g., '.txt', '.md').
+            - content (str): The text content to be written to the note file.
+            
+            Example JSON format:
+            {
+                "filename": "my_note.txt",
+                "content": "This is the content of my note."
+            }
+
+    Returns:
+        The return value from the underlying saveNote function, typically indicating 
+        success or providing the path/confirmation of the saved note.
+
+    Raises:
+        May raise exceptions if:
+        - json_data is malformed or missing required fields
+        - File system permissions prevent writing to the target location
+        - Filename contains invalid characters for the operating system
+
+    Usage Example:
+        >>> save_note('{"filename": "grocery_list.txt", "content": "milk, eggs, bread"}')
+        
+        >>> import json
+        >>> data = json.dumps({"filename": "notes.md", "content": "# My Notes\nImportant item"})
+        >>> save_note(data)
+
+    Note:
+        Ensure that the JSON string is properly formatted and the filename is 
+        compatible with your operating system's file naming conventions.
+    """
     return saveNote(json_data)
 
 
-tools = [get_time, store_mem, calculate, save_note]
+tools = [store_mem, calculate, save_note]

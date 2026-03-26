@@ -15,7 +15,12 @@ def chat_route():
 
 @app.route("/history", methods=["GET"])
 def history():
-    return jsonify({"messages": memory})
+    clean = [
+        {"role": msg["role"], "content": msg.get("display") or msg.get("content")}
+        for msg in memory
+    ]
+
+    return jsonify({"messages": clean})
 
 
 if __name__ == "__main__":

@@ -20,21 +20,24 @@ function Main(){
 
 
     async function sendMessage(input){
-        setSent(true)
-        setMessage(prev=>[...prev, {role: "user", content: input}])
-        setLoading(true)
-        const response = await fetch("http://localhost:5000/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ message: input })
-        })
-        const data = await response.json()
-        setMessage(prev=>[...prev, {role: "ai", content: data.response}])
-        setLoading(false)
-
-    }
+    setSent(true)
+    setMessage(prev=>[...prev, 
+        {role: "user", content: input}  // show immediately
+    ])
+    setLoading(true)
+    
+    const response = await fetch("http://localhost:5000/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input })
+    })
+    const data = await response.json()
+    
+    setMessage(prev=>[...prev, 
+        {role: "ai", content: data.response}  // show after response
+    ])
+    setLoading(false)
+}
     return(
         <div className="main">
             <MsgBox messages={message} send={sent} loading={loading} />
